@@ -1,0 +1,30 @@
+<app-header></app-header>
+<app-navbar></app-navbar>
+<div class="container">
+    <h3 class="display-6">{{ secondaryMessage }}</h3>
+    <div class="mb-5">
+      <span>{{ secondaryMessage }}</span>
+    </div>
+  
+    <div *ngIf="isAuth" class="alert alert-primary" role="alert">
+      <span>Logged in. Go <a routerLink="/tradingbot">trade!</a></span>
+    </div>
+  
+    <ng-container *ngIf="!isAuth">
+      <a
+        [href]="'https://app.alpaca.markets/oauth/authorize?response_type=code&client_id=' + clientId + '&redirect_uri=' + redirectUri + '&state=SOMETHING_RANDOM&scope=account:write%20trading'"
+        class="btn btn-primary btn-lg mb-5"
+      >
+        Login with Alpaca
+      </a>
+    </ng-container>
+  
+    <div class="mb-5">
+      <span>
+        NgTradingbot.com uses <a href="https://alpaca.markets">Alpaca</a> as its brokerage but it is not developed by Alpaca.
+      </span>
+    </div>
+    <app-donation></app-donation>
+  </div>
+  <app-footer></app-footer>
+  

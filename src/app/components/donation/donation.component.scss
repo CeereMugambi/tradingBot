@@ -1,0 +1,22 @@
+.alert {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+  
+    form {
+      margin-left: auto;
+    }
+  
+    @media (max-width: 576px) {
+      flex-direction: column;
+      text-align: center;
+  
+      form {
+        margin-top: 10px;
+        margin-left: 0;
+      }
+    }
+  }
+  

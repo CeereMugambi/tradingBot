@@ -1,0 +1,72 @@
+<footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <div class="row">
+        <!-- About Section -->
+        <div class="col-sm">
+          <div>
+            <h5>About</h5>
+            <p class="small">
+                NgTradingbot.com is an autonomous trading bot platform backed by an open-source developer community, allowing users to run algorithms and trade efficiently! It uses 
+              <a href="https://alpaca.markets" target="_blank">Alpaca</a> as its brokerage but is not developed by Alpaca.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Quick Links Section -->
+        <div class="col-sm">
+          <div class="widget no-box">
+            <h5 class="widget-title">Quick Links</h5>
+            <ul class="thumbnail-widget">
+              <li><div class="thumb-content"><a routerLink="/terms-and-privacy">Privacy</a></div></li>
+              <li><div class="thumb-content"><a routerLink="/terms-and-privacy">Terms</a></div></li>
+              <li><div class="thumb-content"><a routerLink="/terms-and-privacy">Disclaimer</a></div></li>
+            </ul>
+  
+            <!-- PayPal Donate Button -->
+            <form action="https://www.paypal.com/donate/?hosted_button_id=4LH2SQ7EVC25W" method="post" target="_blank">
+              <input type="hidden" name="business" value="AD8RG6ADS8QTS" />
+              <input type="hidden" name="item_name" value="Help me run this website by paying its hosting fees." />
+              <input type="hidden" name="currency_code" value="USD" />
+              <button type="submit" class="btn btn-sm btn-outline-primary">Donate</button>
+            </form>
+          </div>
+        </div>
+  
+        <!-- Contact Section -->
+        <div class="col-sm">
+          <div class="widget no-box">
+            <h5 class="widget-title">Contact</h5>
+            <p>
+              <a href="https://www.linkedin.com/in/janetceere/" target="_blank">
+                <i class="fa fa-linkedin-square" aria-hidden="true"></i> LinkedIn
+              </a>
+            </p>
+            <p>
+              <a href="https://github.com/CeereMugambi/tradingBot" target="_blank">
+                <i class="fa fa-github"></i> Github
+              </a>
+            </p>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  
+    <!-- Copyright -->
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-sm">
+          <p>&copy; Copyright Janet Ceere Mugambi {{ currentYear }}. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Dark Mode Toggle -->
+  <div class="position-fixed py-2 px-3 bg-dark text-white rounded-pill" style="bottom:1rem; left:1rem;">
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="darkMode" (change)="toggleDarkMode()">
+      <label id="darkModeLabel" for="darkMode">{{ isDarkMode ? 'Dark' : 'Light' }}</label>
+    </div>
+  </div>
+  
